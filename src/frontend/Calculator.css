@@ -1,0 +1,28 @@
+#calculator {
+    margin: auto;
+    padding: 20px;
+}
+
+#calculator.highlight {
+    background-color: lightcoral;
+}
+
+input {
+    width: 150px;
+    padding: 10px;
+    margin: 10px;
+}
+
+select {
+    width: 140px;
+    padding: 10px;
+}
+
+.border {
+    border: 3px solid grey;
+}
+
+p {
+    margin: 20px;
+    font-size: xx-large;
+}
