@@ -6,9 +6,30 @@
  */
 function calculate(operation, a, b) {
     return {
-        result: 42,
+        result: calculateResult(operation, a, b),
         palindrome: false
     };
+}
+
+function calculateResult(operation, a, b) {
+    a = Number(a)
+    b = Number(b)
+    if (typeof a != "number" || typeof b != "number" || Number.isNaN(a) || Number.isNaN(b)) {
+        return "Not a Number"
+    }
+
+    switch (operation) {
+        case "+":
+            return a+b;
+        case "-":
+            return a-b;
+        case "/":
+            return a/b;
+        case "*":
+            return a*b;
+        default:
+            return "Not implemented";
+    }
 }
 
 export default calculate;
