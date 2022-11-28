@@ -36,7 +36,7 @@ function calculate(operation, a, b) {
   }
   return {
     result: result,
-    palindrome: checkPalindrome(result.toString()),
+    palindrome: result ? checkPalindrome(result.toString()) : false,
   };
 }
 

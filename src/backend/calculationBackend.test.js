@@ -13,10 +13,10 @@ test("add 12321 and 0 correctly and return a palindrome", () => {
   expect(result.palindrome).toBe(true);
 });
 
-// test("divide 12321 through 0 and throw an error", () => {
-//   const result = calculate("/", 12321, 0);
-//   expect(result.result).toEqual(undefined);
-// });
+test("divide 12321 through 0 and throw an error", () => {
+  const result = calculate("/", 12321, 0);
+  expect(result.result).toBe(undefined);
+});
 
 test("substract 12321 and 1 correctly and return not a palindrome", () => {
   const result = calculate("-", 12321, 1);
