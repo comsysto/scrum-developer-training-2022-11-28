@@ -1,6 +1,35 @@
 import calculate from "./calculationBackend";
 
-test('add 1 and 2 correctly', () => {
-    const result = calculate("+", 1, 2);
-    expect(result.result).toEqual(3);
-})
+const inputObject = [
+  {
+    operation: "+",
+    a: 42,
+    b: 11,
+    result: 42 + 11,
+  },
+  {
+    operation: "-",
+    a: 42,
+    b: 11,
+    result: 42 - 11,
+  },
+  {
+    operation: "/",
+    a: 42,
+    b: 11,
+    result: 42 / 11,
+  },
+  {
+    operation: "*",
+    a: 42,
+    b: 11,
+    result: 42 * 11,
+  },
+];
+
+inputObject.forEach(({ operation, a, b, result }) => {
+  test(`${operation} ${a} and ${b} correctly`, () => {
+    const testResult = calculate(operation, a, b);
+    expect(testResult.result).toEqual(result);
+  });
+});
